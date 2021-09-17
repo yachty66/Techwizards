@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    src: url("fonts/MagicSchoolTwo.ttf");
+    font-family: wiz;
+}
+
+@font-face {
+    src: url("fonts/Roboto-Light.ttf");
+    font-family: rob;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+/*HEADER*/
+.header{
+    overflow: hidden;
+    background-color: #000000;
+    width: 100%;
+}
+
+.header a {
+    margin-left: 11.111%;
+    float: left;
+    color: #34E034;
+    padding: 12px;
+    text-decoration: none;
+    line-height: 50px;
+}
+
+.header a.logo {
+    font-family: Wiz;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+/*RIGHT BOX*/
+.main {
+    flex: 63%;
+    background-color: white;
+}
+
+.main-box {
+    background-color: #ffffff;
+    height: 130px;
+    display: table;
+    width: 798px;
+    border-right: solid;
+    border-left: solid;
+    border-bottom: solid;
+    border-color: #E6E6E6;
+}
+
+.text-in-main-box{
+    font-weight: bold;
+    font-family: rob;
+    width: 60%;
+    padding: 7%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container-for-button-in-main-box{
+    width: 40%;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.button-in-main-box{
+    display:inline-block;
+    padding:0.8em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:4em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:rob;
+    font-weight:bold;
+    color:#ffffff;
+    background-color:#34E034;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.button-in-main-box:hover{
+    transform: scale(1.1);
+}
+
+/*LEFT BOX*/
+.left-main {
+    flex: 30%;
+    background-color: #f1f1f1;
+}
+
+.button-in-left-main-box{
+    margin-top: 40px;
+    border-radius:4em;
+    font-family:rob;
+    font-weight:bold;
+    color:#ffffff;
+    background-color:#34E034;
+}
+
+/*Column container*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 664px) {
+  .text-in-main-box, .button-in-main-box {
+    flex-direction: column;
+  }
+}
+
+
+
