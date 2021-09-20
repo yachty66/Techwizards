@@ -48,7 +48,7 @@ html, body {
 .main-box {
     background-color: #ffffff;
     height: 130px;
-    display: table;
+    display: flex;
     width: 798px;
     border-right: solid;
     border-left: solid;
@@ -61,22 +61,23 @@ html, body {
     font-family: rob;
     width: 60%;
     padding: 7%;
-    display: table-cell;
+    display: flex;
     vertical-align: middle;
 }
 
 .container-for-button-in-main-box{
     width: 40%;
-    display: table-cell;
+    display: flex;
     vertical-align: middle;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-in-main-box{
     display:inline-block;
     padding:0.8em 1.2em;
     margin:0 0.3em 0.3em 0;
-    border-radius:4em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:rob;
@@ -85,25 +86,50 @@ html, body {
     background-color:#34E034;
     text-align:center;
     transition: all 0.2s;
+    font-size: 14px;
+    border-radius: 4em;
 }
 
 .button-in-main-box:hover{
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 
 /*LEFT BOX*/
 .left-main {
     flex: 30%;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
 }
 
-.button-in-left-main-box{
-    margin-top: 40px;
-    border-radius:4em;
+/*SELECT BUTTON*/
+select{
+    font-size: 14px;
+    border-radius: 4em;
+    width:117px;
+    border: none;
+    display:inline-block;
+    padding:0.8em 1.2em;
+    box-sizing: border-box;
+    text-decoration:none;
     font-family:rob;
     font-weight:bold;
     color:#ffffff;
     background-color:#34E034;
+    text-align:center;
+    transition: all 0.2s;
+    margin-top: 39px;
+}
+
+.select:hover{
+    -webkit-transform: scale(1.1);
+}
+
+/*icon*/
+.icon-position{
+    margin-top: 200px;
+    margin-left: 33.195%;
+    width: 61%;
+    height: auto;
+    max-width: 290px;
 }
 
 /*Column container*/
@@ -112,12 +138,85 @@ html, body {
   flex-wrap: wrap;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 664px) {
-  .text-in-main-box, .button-in-main-box {
+/* Responsive layout - when the screen is less than 700px wide, stack the content of the main box */
+@media only screen and (max-width: 700px) {
+  .main-box {
+    width: 100%;
+    max-width: 798px;
+    display: flex;
     flex-direction: column;
+    height: auto;
+  }
+
+  .text-in-main-box {
+    width: 100%;
+    padding: 7% 0;
+    justify-content: center;
+  }
+
+  .container-for-button-in-main-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
+
+@media only screen and (max-width: 1440px){
+    .main-box {
+        background-color: #ffffff;
+        height: 130px;
+        display: flex;
+        width: 83.299%;
+        border-right: solid;
+        border-left: solid;
+        border-bottom: solid;
+        border-color: #E6E6E6;
+    }
+
+    .select{
+        margin-left: 33.195%;
+    }
+}
+
+@media only screen and (max-width: 748px){
+    .icon-position{
+        display: none;
+    }
+    .left-main{
+       flex: 100%;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .select-button-box {
+        background-color: #ffffff;
+        display: flex;
+        height:130px;
+        width: 322px;
+        float: right;
+    }
+
+    .icon-position-box{
+        background-color: #ffffff;
+        display: flex;
+        height:700px;
+        width: 354px;
+        float: right;
+        border-style: solid;
+        border-color: red;
+        margin-top: 200px;
+    }
+
+    .icon-position{
+        width: 294.02px;
+        height: auto;
+        margin-top: 0px;
+        margin-right: ;
+    }
+
+
+}
+
 
 
 
